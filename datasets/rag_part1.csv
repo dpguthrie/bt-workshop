@@ -1,0 +1,12 @@
+org_id,query,reference_answer,classic,expected_latency,MetaData
+52593,What was Khan Academy's total revenue in 2023?,"$98,267,721.00",d7057915-cfb5-4166-b067-ce20f9f85ffd,30,classic
+52593,How many servings does the Snickers Sweet and Salty Popcorn recipe make?,The Snickers Sweet and Salty Popcorn recipe makes 12 servings.,b4b1834f-f64f-486d-8fbe-8b6b11f76662,30,non_classic
+52593,List all the diversification benefits Schwab attributes to holding both domestic and international asset classes,"Schwab attributes several diversification benefits to holding both domestic and international asset classes within its Intelligent Portfolios:
+
+*   **Diversification within and across asset classes**: Schwab Intelligent Portfolios are designed with the principle that investors should diversify both within and across various asset classes.
+*   **Enhanced risk-adjusted returns**: Including fundamentally weighted indexes in both domestic and international categories can add diversification and potentially enhance risk-adjusted returns over time. These indexes behave differently from market-cap weighted indexes in various market conditions, complementing traditional market-cap weighted ETFs.
+*   **Reduced volatility and improved stability**: International developed large company stocks can provide diversification benefits and potentially reduce overall portfolio volatility. Similarly, international developed small company stocks offer diversification and growth potential, which can contribute to a more stable portfolio.
+*   **Access to growth potential**: International emerging market stocks offer significant growth potential due to the rapid economic expansion in these regions, providing diversification and opportunities for higher returns.
+*   **Inflation protection and income potential**: International exchange-traded REITs can offer inflation protection, income potential, and diversification against more traditional asset classes.
+*   **Diversification from stocks**: U.S. Treasuries, for example, offer diversification from stocks, often moving in the opposite direction, especially during economic downturns or stock market declines. International developed country bonds also provide diversification benefits and can offer higher yields than domestic bonds.",6ffbd965-225f-4b8b-bf43-f1155ab5bda8,30,non_classic
+52593,List the three ways you can hold title to a house in Dutch.,"Huurders van het geheel, Mede-eigenaars met overlevingsrecht, Mede-eigenaars",cd3eb562-d527-4394-aa08-08c7a48d4800,30,classic

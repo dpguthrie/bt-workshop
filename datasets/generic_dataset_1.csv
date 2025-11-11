@@ -1,0 +1,120 @@
+Query,Reference Answer,Expected Latency in Seconds
+What element has the atomic number 1?,Hydrogen,30
+Who painted the Mona Lisa?,Leonardo da Vinci,30
+What gas do plants primarily absorb for photosynthesis?,Carbon dioxide,30
+What is the square root of 64?,8,30
+What is the hardest natural substance on Earth?,Diamond,30
+Who was the first person to walk on the Moon?,Neil Armstrong,30
+What is the capital of Japan?,Tokyo,30
+What is the smallest prime number?,2,30
+What is the chemical symbol for gold?,Au,30
+What is the smallet unit of matter?,An atom,30
+What is the difference between mitosis and meiosis in cellular division?,"Mitosis produces two genetically identical daughter cells for growth/repair, while meiosis produces four genetically unique cells for sexual reproduction.",30
+How does CRISPR-Cas9 technology work in genome editing?,"CRISPR uses a guide RNA to target a specific DNA sequence, and the Cas9 enzyme cuts the DNA to allow removal or insertion of genetic material.",30
+Explain the concept of entropy in thermodynamics.,"Entropy is a measure of disorder; in thermodynamics, it states that in an isolated system, disorder tends to increase over time.",30
+What is the greenhouse effect and what causes it?,"The greenhouse effect occurs when gases like CO₂ trap heat in Earth’s atmosphere, preventing it from escaping into space and warming the planet.",30
+How do superconductors differ from regular conductors?,"Superconductors conduct electricity with zero resistance when cooled below a critical temperature, unlike regular conductors which always have some resistance.",30
+What is the role of neurotransmitters in synaptic transmission?,"Neurotransmitters carry signals across the synaptic gap between neurons, enabling communication within the nervous system.",30
+How does natural selection drive evolution?,"Natural selection favors organisms with advantageous traits, allowing them to survive and reproduce, gradually shaping species over generations.",30
+Explain the Doppler effect in physics.,"The Doppler effect is the change in frequency or wavelength of a wave as the source and observer move relative to each other (e.g., a passing siren).",30
+"What is dark matter, and why do scientists believe it exists?",Dark matter is an unseen form of matter inferred from gravitational effects on galaxies and cosmic structure; it does not emit light and is detected indirectly.,30
+How do enzymes speed up biochemical reactions?,"Enzymes lower the activation energy required, enabling reactions to occur more quickly by binding substrates and stabilizing transition states.",30
+"Create a detailed onboarding email sequence (3 emails) for a SaaS productivity app. Include subject lines, previews, body copy, and one CTA in each email.","Email #1 — Welcome & Setup
+Subject: Welcome to FocusFlow — Let’s Get You Set Up ✅
+Preview: Your productivity upgrade starts now.
+Body:
+Welcome to FocusFlow! We're excited to help you build better habits, manage tasks effortlessly, and free up time. To begin, log in and personalize your workspace. Select goal categories, set daily focus periods, and sync your calendar. Our AI assistant will optimize your schedule in moments.
+CTA: Set Up Your Workspace
+
+Email #2 — Tips & Templates
+Subject: 3 Proven Productivity Templates Inside
+Preview: Use expert frameworks with one click.
+Body:
+To help you start strong, we’ve included proven templates: Daily Prioritization Board, Deep Work Scheduler, and Habit-Building Tracker. Each is backed by behavioral science. Duplicate a template and customize it to your workflow.
+CTA: Browse Templates
+
+Email #3 — Training & Support
+Subject: Maximize FocusFlow with Our Starter Training
+Preview: Get the most out of your dashboard in 15 minutes.
+Body:
+Join our interactive onboarding demo to master automation triggers, weekly review workflows, and our accountability dashboard. Our support team is always available — real humans ready to help.
+CTA: Register for Training",30
+"Write a long-form Instagram caption for a nonprofit mental-health campaign, including a personal story, data insight, CTA, and hashtags.","When I finally reached out for help, I realized I wasn’t alone — and neither are you. For years, I thought asking for support meant weakness. It didn’t. It meant choosing healing. Millions feel the same way but struggle in silence — in fact, 1 in 5 adults experience mental-health challenges each year. If you’re reading this and need someone to talk to, this is your sign to reach out. Healing isn’t loud or linear — it’s one brave step at a time. 💚
+Call to action: If you or someone you know is struggling, visit our resource link in bio for affordable therapy options and peer-support groups.
+#MentalHealthMatters #EndTheStigma #YouAreNotAlone #HealingJourney #NonprofitLife",30
+Create a 5-slide presentation script introducing a new employee sustainability program.,"Slide 1 — Why Sustainability Matters
+Welcome! Today we launch our sustainability initiative focused on environmental stewardship, community impact, and long-term responsibility.
+
+Slide 2 — Program Pillars
+Recycling expansion, reduced office energy use, hybrid work incentives, volunteer cleanup events.
+
+Slide 3 — Rewards
+Earn points for sustainable actions—redeemable for gift cards, extra PTO hours, and charity donations.
+
+Slide 4 — Tools & Support
+Sustainability dashboard, monthly challenges, Slack community, quarterly workshops.
+
+Slide 5 — Take Action
+Sign up today. Start logging your impact. Together, we build a greener workplace.",30
+"Draft a landing page for an online cybersecurity bootcamp, including modules, learning outcomes, price, and guarantee.","Headline: Become a Cybersecurity Analyst in 12 Weeks
+Subhead: Hands-on, live instruction. No experience required.
+
+Modules:
+• Network security fundamentals
+• Threat detection & SOC workflows
+• Penetration testing & ethical hacking
+• Cloud & endpoint security
+• Security compliance & incident response
+
+Outcomes:
+Defend networks, analyze threats, pass CompTIA Security+, land job-ready skills.
+
+Price: $3,500 or $200/month financing
+
+Guarantee: Job-placement support with a 6-month job-assistance guarantee.",30
+"Write a detailed YouTube video description for a travel vlog in Kyoto, including timestamps and affiliate links.","Explore Kyoto like a local! From sunrise at Fushimi Inari to tea ceremonies in Gion.
+Timestamps:
+0:00 — Intro
+0:44 — Fushimi Inari sunrise
+3:12 — Nishiki Market food tour
+6:55 — Arashiyama Bamboo Forest walk
+9:20 — Gion evening tea ceremony
+
+Book our Kyoto itinerary & gear below:
+• Travel backpack: link
+• Camera gear: link
+• JR Pass guide: link",30
+"Write a recruitment email encouraging college seniors to apply for a data-science internship. Include a compelling intro, program benefits, project examples, qualifications, timeline, and a closing CTA.","Subject: Launch Your Data Science Career With Us 🚀
+
+Hi there,
+We're excited to invite you to apply for the Data Science Internship Program at InsightTech — a hands-on, industry-driven opportunity designed for students who want to use data to drive real-world impact.
+
+As an intern, you will:
+• Work alongside senior data scientists on machine-learning models, data-pipeline development, and predictive analytics
+• Analyze real customer datasets to uncover behavior patterns and build dashboard visualizations in Python and SQL
+• Present insights to product leaders and gain experience in stakeholder communication
+• Receive mentorship, resume feedback, and interview coaching to help launch your career
+
+Recent intern projects include customer churn prediction models, AI-powered personalization algorithms, and fraud-detection risk scoring.
+
+Qualifications: rising college seniors in CS, math, engineering, or similar fields; Python + SQL familiarity preferred; interest in statistics and ML
+
+Timeline: Applications close April 15. Interviews begin May 1. Program starts in June (12-week paid program).
+
+Apply now — take the first step toward a career in data innovation.
+Apply Here →",30
+"Write a 6-tweet educational thread explaining how renewable energy reduces carbon emissions. Include an engaging hook, examples, stats, and a conclusion.","Tweet 1: Can renewable energy really fight climate change? 🌎 Short answer: yes — and here’s how. 👇
+Tweet 2: Fossil fuels release carbon dioxide when burned. Renewables like wind & solar generate electricity without combustion — meaning far fewer emissions.
+Tweet 3: Solar + wind are now the cheapest forms of new electricity in many countries (IEA, 2024). Cost-effective + clean = scalable solution.
+Tweet 4: Example: Shifting from coal to solar can reduce CO₂ emissions by up to 95% per unit of electricity produced.
+Tweet 5: Plus: renewable jobs are growing fast — 4M+ new jobs globally in the last 5 years in solar, wind, and battery tech.
+Tweet 6: Bottom line: renewable energy isn’t just a climate solution — it’s an economic transformation. The transition is happening. Let's accelerate it. ⚡️🌱",30
+"Write a 90-second elevator pitch for a VR fitness app. Include target audience, product features, technology, benefits, and a strong closing line.","Imagine a fitness experience that makes you forget you’re working out. With MotionVerse, you step into immersive VR worlds where every punch, step, and stretch earns real-time feedback and rewards.
+
+Designed for busy professionals, gamers, and anyone who struggles with gym motivation, MotionVerse combines gamified exercise, AI-guided coaching, and adaptive difficulty so every session matches your pace and goals.
+
+Train in virtual boxing arenas, hike neon mountaintops, dance in futuristic studios, or join live workout events with friends. Our platform tracks heart rate, calorie burn, strength progression, and form improvement using built-in motion sensors and machine-learning posture correction.
+
+We believe fitness should be fun, social, and empowering. With MotionVerse, exercise becomes play — and play becomes progress. Let’s redefine movement.",30
+"Write a cover-letter paragraph for a software engineer applying to a fintech company. Include achievements, skills, and alignment with company mission.","I’m excited to apply for the Software Engineer role at FinEdge because your mission to democratize financial access aligns deeply with my passion for using technology for social impact. With four years of Python and Go experience building secure fintech infrastructure, I developed fraud-detection microservices that reduced false positives by 27% and built a scalable payment-processing pipeline supporting 2M+ transactions per week. I am experienced in cloud architecture (AWS & Kubernetes), encryption protocols, and PCI-compliant development. I thrive in mission-driven environments and am eager to contribute to products that help every individual access better financial tools.",30
+"Write a 5-sentence children's story about a shy robot making its first friend. Include internal emotion, action, and positive resolution.","Bip the robot lived in a workshop and always watched other robots play from behind a toolbox. He wanted to join, but whenever he tried to say hello, his voice fizzled into a tiny beep. One day, a friendly robot named Zuzu rolled over and asked, “Want to build a rocket ship together?” Bip beeped nervously but nodded, and soon the two were stacking shiny gears and wires into a pretend spaceship. By the time they blasted off on their imaginary adventure, Bip learned that friendship starts with one brave little hello — even if it sounds like a beep.",30
