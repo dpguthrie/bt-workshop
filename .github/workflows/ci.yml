@@ -32,8 +32,8 @@ jobs:
             BASE_BRANCH="${{ github.event.before }}"
           fi
 
-          # Get changed .py files in evals directory
-          CHANGED_FILES=$(git diff --name-only $BASE_BRANCH HEAD | grep '^evals/.*\.py$' || true)
+          # Get changed .py files in evals directory that start with eval_
+          CHANGED_FILES=$(git diff --name-only $BASE_BRANCH HEAD | grep '^evals/eval_.*\.py$' || true)
 
           if [ -z "$CHANGED_FILES" ]; then
             echo "No eval files changed"
@@ -76,5 +76,4 @@ jobs:
           api_key: ${{ secrets.BRAINTRUST_API_KEY }}
           runtime: python
           package_manager: uv
-          root: evals
           paths: ${{ steps.changed-files.outputs.files }}
