@@ -29,6 +29,9 @@ jobs:
           if [ -z "$BASE_BRANCH" ]; then
             # For push events, compare with the previous commit
             BASE_BRANCH="${{ github.event.before }}"
+          else
+            # For pull requests, prefix with origin/
+            BASE_BRANCH="origin/$BASE_BRANCH"
           fi
 
           # Get changed .py files in evals directory that start with eval_
