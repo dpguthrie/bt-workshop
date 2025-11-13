@@ -1,12 +1,9 @@
 import time
 
 import braintrust
-from dotenv import load_dotenv
 
-from client import get_client
-from scorers import dual_llm_scorer, response_time_scorer
-
-load_dotenv()
+from evals.client import get_client
+from evals.scorers import dual_llm_scorer, response_time_scorer
 
 # Get the Braintrust proxy client
 client = get_client()
