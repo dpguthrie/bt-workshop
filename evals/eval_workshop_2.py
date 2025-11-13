@@ -20,6 +20,7 @@ def task(input: str) -> dict:
     """
 
     # Call Gemini and measure time
+
     gemini_start = time.time()
     gemini_response = client.chat.completions.create(
         model="gemini-2.0-flash-lite",
