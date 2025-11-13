@@ -30,8 +30,6 @@ jobs:
             # For push events, compare with the previous commit
             BASE_BRANCH="${{ github.event.before }}"
           else
-            BASE_BRANCH="origin/$BASE_BRANCH"
-          else
             # For pull requests, prefix with origin/
             BASE_BRANCH="origin/$BASE_BRANCH"
           fi
