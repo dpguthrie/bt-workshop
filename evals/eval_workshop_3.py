@@ -66,6 +66,7 @@ def task(input: str, hooks: braintrust.EvalHooks) -> dict:
 
 eval = braintrust.Eval(
     PROJECT_NAME,
+    experiment_name="Workshop 3",
     data=braintrust.init_dataset(
         PROJECT_NAME,
         DATASET_NAME,

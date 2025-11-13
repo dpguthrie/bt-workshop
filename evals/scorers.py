@@ -315,7 +315,8 @@ def dual_llm_scorer_classifier_images(
     client = get_client()
 
     # Build the prompt text
-    prompt_text = f"""You are an expert evaluator assessing the factual correctness of AI responses about an image.
+    prompt_text = f"""
+You are an expert evaluator assessing the factual correctness of AI responses about an image.
 
 ## CONTEXT ##
 Question: {input}
