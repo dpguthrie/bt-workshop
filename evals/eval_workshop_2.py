@@ -23,7 +23,7 @@ def task(input: str) -> dict:
 
     gemini_start = time.time()
     gemini_response = client.chat.completions.create(
-        model="gemini-2.0-flash-lite",
+        model="gpt-4o",  # gemini-2.0-flash-lite
         messages=[{"role": "user", "content": input}],
     )
     gemini_duration = time.time() - gemini_start
