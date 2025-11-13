@@ -30,7 +30,7 @@ def task(input: str) -> dict:
     # Call Groq and measure time
     groq_start = time.time()
     groq_response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="claude-sonnet-4-20250514",  # "llama-3.1-8b-instant
         messages=[{"role": "user", "content": input}],
     )
     groq_duration = time.time() - groq_start
