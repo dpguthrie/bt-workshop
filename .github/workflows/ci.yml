@@ -77,3 +77,4 @@ jobs:
           runtime: python
           package_manager: uv
           paths: ${{ steps.changed-files.outputs.files }}
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
