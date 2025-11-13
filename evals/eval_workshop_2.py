@@ -20,23 +20,38 @@ def task(input: str) -> dict:
     """
 
     # Call Gemini and measure time
-
-    gemini_start = time.time()
-    gemini_response = client.chat.completions.create(
-        model="gpt-4o",  # gemini-2.0-flash-lite
-        messages=[{"role": "user", "content": input}],
-    )
-    gemini_duration = time.time() - gemini_start
-    gemini_content = gemini_response.choices[0].message.content or ""  # type: ignore
+    gemini_content = ""
+    gemini_duration = 0.0
+    try:
+        gemini_start = time.time()
+        gemini_response = client.chat.completions.create(
+            model="gpt-4o",  # gemini-2.0-flash-lite
+            messages=[{"role": "user", "content": input}],
+        )
+        gemini_duration = time.time() - gemini_start
+        gemini_content = gemini_response.choices[0].message.content or ""  # type: ignore
+    except Exception as e:
+        gemini_duration = (
+            time.time() - gemini_start if "gemini_start" in locals() else 0.0
+        )
+        gemini_content = f"ERROR: {str(e)}"
+        braintrust.current_span().log(error=f"Gemini call failed: {str(e)}")
 
     # Call Groq and measure time
-    groq_start = time.time()
-    groq_response = client.chat.completions.create(
-        model="claude-sonnet-4-20250514",  # "llama-3.1-8b-instant
-        messages=[{"role": "user", "content": input}],
-    )
-    groq_duration = time.time() - groq_start
-    groq_content = groq_response.choices[0].message.content or ""  # type: ignore
+    groq_content = ""
+    groq_duration = 0.0
+    try:
+        groq_start = time.time()
+        groq_response = client.chat.completions.create(
+            model="claude-sonnet-4-20250514",  # "llama-3.1-8b-instant
+            messages=[{"role": "user", "content": input}],
+        )
+        groq_duration = time.time() - groq_start
+        groq_content = groq_response.choices[0].message.content or ""  # type: ignore
+    except Exception as e:
+        groq_duration = time.time() - groq_start if "groq_start" in locals() else 0.0
+        groq_content = f"ERROR: {str(e)}"
+        braintrust.current_span().log(error=f"Groq call failed: {str(e)}")
 
     # Log custom metrics
     braintrust.current_span().log(
@@ -64,5 +79,6 @@ eval = braintrust.Eval(
         DATASET_NAME,
     ),
     task=task,
+    max_concurrency=10,
     scores=[dual_llm_scorer, response_time_scorer],  # type: ignore
 )
