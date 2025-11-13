@@ -1,12 +1,9 @@
 import time
 
 import braintrust
-from dotenv import load_dotenv
 
-from client import get_client
-from scorers import dual_llm_scorer, response_time_scorer
-
-load_dotenv()
+from evals.client import get_client
+from evals.scorers import dual_llm_scorer, response_time_scorer
 
 # Get the Braintrust proxy client
 client = get_client()
@@ -33,11 +30,19 @@ def task(input: str) -> dict:
     # Call Groq and measure time
     groq_start = time.time()
     groq_response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model="claude-sonnet-4-20250514",  # "llama-3.1-8b-instant
         messages=[{"role": "user", "content": input}],
     )
     groq_duration = time.time() - groq_start
     groq_content = groq_response.choices[0].message.content or ""  # type: ignore
+
+    # Log custom metrics
+    braintrust.current_span().log(
+        metrics={
+            "gemini_duration_seconds": round(gemini_duration, 3),
+            "groq_duration_seconds": round(groq_duration, 3),
+        }
+    )
 
     # Return both responses and timing data for the scorer
     # Note: The output dict keys become template variables in the scorer
@@ -51,6 +56,7 @@ def task(input: str) -> dict:
 
 eval = braintrust.Eval(
     PROJECT_NAME,
+    experiment_name="Workshop 2",
     data=braintrust.init_dataset(
         PROJECT_NAME,
         DATASET_NAME,

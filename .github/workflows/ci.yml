@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "evals/**"
+      - ".github/workflows/ci.yml"
 
 permissions:
   pull-requests: write
@@ -21,25 +22,59 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Detect changed eval files
+        id: changed-files
+        run: |
+          # Get the base branch (main/master)
+          BASE_BRANCH="${{ github.base_ref }}"
+          if [ -z "$BASE_BRANCH" ]; then
+            # For push events, compare with the previous commit
+            BASE_BRANCH="${{ github.event.before }}"
+          fi
+
+          # Get changed .py files in evals directory that start with eval_
+          CHANGED_FILES=$(git diff --name-only $BASE_BRANCH HEAD | grep '^evals/eval_.*\.py$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No eval files changed"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "files=" >> $GITHUB_OUTPUT
+          else
+            echo "Changed eval files:"
+            echo "$CHANGED_FILES"
+            # Convert newline-separated list to space-separated for the action
+            FILES_LIST=$(echo "$CHANGED_FILES" | tr '\n' ' ')
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "files=$FILES_LIST" >> $GITHUB_OUTPUT
+          fi
+
       - name: Set up Python
+        if: steps.changed-files.outputs.has_changes == 'true'
         uses: actions/setup-python@v6
         with:
           python-version-file: ".python-version"
 
       - name: Install uv
+        if: steps.changed-files.outputs.has_changes == 'true'
         uses: astral-sh/setup-uv@v6
 
       - name: Install dependencies
+        if: steps.changed-files.outputs.has_changes == 'true'
         env:
           UV_SYSTEM_PYTHON: 1
         run: |
           uv pip install -r requirements.txt
 
       - name: Run Evals
-        uses: braintrustdata/eval-action@add-slack-integration  # Replace with actual branch name
+        if: steps.changed-files.outputs.has_changes == 'true'
+        uses: braintrustdata/eval-action@add-slack-integration
+        env:
+          BRAINTRUST_API_KEY: ${{ secrets.BRAINTRUST_API_KEY }}
+          PROJECT_NAME: "Nlp_Writer"
+          PYTHONPATH: ${{ github.workspace }}
         with:
           api_key: ${{ secrets.BRAINTRUST_API_KEY }}
           runtime: python
           package_manager: uv
-          root: evals
+          paths: ${{ steps.changed-files.outputs.files }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
