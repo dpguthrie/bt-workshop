@@ -23,6 +23,7 @@ def task(input: str, hooks: braintrust.EvalHooks) -> dict:
     metadata.
         Returns both responses for the scorer to judge, along with timing data.
     """
+
     # Get picture from metadata
     picture_bytes = hooks.metadata["attachment"].data
     picture_base64 = base64.b64encode(picture_bytes).decode("utf-8")
