@@ -18,6 +18,7 @@ def task(input: str) -> dict:
     Task that calls both Gemini and Groq with the same query.
     Returns both responses for the scorer to judge, along with timing data.
     """
+
     # Call Gemini and measure time
     gemini_start = time.time()
     gemini_response = client.chat.completions.create(
