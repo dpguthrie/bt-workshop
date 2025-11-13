@@ -40,6 +40,7 @@ jobs:
         env:
           BRAINTRUST_API_KEY: ${{ secrets.BRAINTRUST_API_KEY }}
           PROJECT_NAME: "Nlp_Writer"
+          PYTHONPATH: ${{ github.workspace }}
         with:
           api_key: ${{ secrets.BRAINTRUST_API_KEY }}
           runtime: python
