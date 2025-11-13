@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "evals/**"
+      - ".github/workflows/ci.yml"
 
 permissions:
   pull-requests: write
