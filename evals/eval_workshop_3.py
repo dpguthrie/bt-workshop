@@ -56,6 +56,14 @@ def task(input: str, hooks: braintrust.EvalHooks) -> dict:
     groq_duration = time.time() - groq_start
     groq_content = groq_response.choices[0].message.content or ""
 
+    # Log custom metrics
+    braintrust.current_span().log(
+        metrics={
+            "gemini_duration_seconds": round(gemini_duration, 3),
+            "groq_duration_seconds": round(groq_duration, 3),
+        }
+    )
+
     # Return both responses and timing data for the scorer
     return {
         "gemini_response": gemini_content,

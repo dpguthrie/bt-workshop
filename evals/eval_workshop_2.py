@@ -36,6 +36,14 @@ def task(input: str) -> dict:
     groq_duration = time.time() - groq_start
     groq_content = groq_response.choices[0].message.content or ""  # type: ignore
 
+    # Log custom metrics
+    braintrust.current_span().log(
+        metrics={
+            "gemini_duration_seconds": round(gemini_duration, 3),
+            "groq_duration_seconds": round(groq_duration, 3),
+        }
+    )
+
     # Return both responses and timing data for the scorer
     # Note: The output dict keys become template variables in the scorer
     return {
@@ -48,6 +56,7 @@ def task(input: str) -> dict:
 
 eval = braintrust.Eval(
     PROJECT_NAME,
+    experiment_name="Workshop 2",
     data=braintrust.init_dataset(
         PROJECT_NAME,
         DATASET_NAME,
