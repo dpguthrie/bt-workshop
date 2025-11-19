@@ -161,7 +161,7 @@ def dual_llm_scorer(
 
     if not gemini_response or not groq_response:
         return {
-            "name": "DualLLMScorer",
+            "name": name,
             "score": 0.0,
             "metadata": {
                 "error": "Output missing gemini_response or groq_response",
@@ -193,7 +193,7 @@ def dual_llm_scorer(
 
     if judgment is None:
         return {
-            "name": "DualLLMScorer",
+            "name": name,
             "score": 0.0,
             "metadata": {
                 "error": "Failed to parse structured output from judge",
@@ -206,7 +206,7 @@ def dual_llm_scorer(
     score = 1.0 if judgment.decision == "YES" else 0.0
 
     return {
-        "name": "DualLLMScorer",
+        "name": name,
         "score": score,
         "metadata": {
             "gemini_response": gemini_response,

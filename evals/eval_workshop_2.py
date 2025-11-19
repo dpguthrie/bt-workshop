@@ -40,6 +40,7 @@ def task(input: str) -> dict:
     # Call Groq and measure time
     groq_content = ""
     groq_duration = 0.0
+
     try:
         groq_start = time.time()
         groq_response = client.chat.completions.create(
