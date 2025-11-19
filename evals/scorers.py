@@ -145,7 +145,7 @@ def dual_llm_scorer(
     """
     Scorer that judges if both Gemini and Groq responses are correct.
     """
-    name = "DualLLMScorer"
+    name = "ComparatorEvaluator"
     if not output:
         return {
             "name": name,
@@ -225,7 +225,7 @@ def response_time_scorer(
     metadata: Dict[str, Any],
 ):
     DEFAULT_RESPONSE_TIME_THRESHOLD = 10
-    NAME = "ResponseTimeScorer"
+    NAME = "ResponseTimeEvaluator"
 
     gemini_response_time = output.get("gemini_duration_seconds", None)
     if gemini_response_time is None:
